@@ -1,1 +1,6 @@
-exports.fish = 2;
+
+module.exports = {
+	fish : 2,
+	b: require('./b')
+};
+

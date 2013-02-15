@@ -1,3 +1,7 @@
-var t = require('./t');
+//var t = require('./t');
 
-t.run();
+//t.run();
+
+var dot = require('./');
+
+console.dir(dot);
