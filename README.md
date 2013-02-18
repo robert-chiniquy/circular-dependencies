@@ -1,12 +1,18 @@
 circular-dependencies
 =====================
+```
           _    __ 
 __      _| |_ / _|
 \ \ /\ / / __| |_ 
  \ V  V /| |_|  _|
   \_/\_/  \__|_|  
+```
 
-Both fixtures have the same dependency structure. One exhibits what must be a bug in node's `require()`: an incomplete object being returned to a top-level require. This bug seems to only manifest when `module.exports` is used, and only when some orderings of requires occur.
+Both fixtures have the same dependency structure:
+
+<img src="https://raw.github.com/robert-chiniquy/circular-dependencies/master/fixture-1/dependencies.png"></img>
+
+One exhibits what must be a bug in node's `require()`: an incomplete object being returned to a top-level require. This bug seems to only manifest when `module.exports` is used, and only when some orderings of requires occur.
 
 ```
 tsumego:circular-dependencies(master) rch$ diff fixture-1 fixture-2
