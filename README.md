@@ -3,6 +3,9 @@ circular-dependencies
 
 I have a theory: when node assigns a complete object reference to an 'incomplete' object after resolving the object's definition from a circular dependency, it uses the original `module.exports` (known as `exports` inside the module), so if you overwrite `module.exports` in your module definition, the wrong object reference is written into place.
 
+example
+=======
+
 Both fixtures have the same dependency structure:
 
 <img src="https://raw.github.com/robert-chiniquy/circular-dependencies/master/fixture-1/dependencies.png"></img>
